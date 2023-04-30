@@ -1,45 +1,42 @@
+import React from "react";
+import Product from "./products";
+import { Grid, Card, CardMedia, CardContent, Typography } from "@mui/material";
 
-import React from 'react';
-import { Grid, Card, CardMedia, CardContent, Typography } from '@mui/material';
+/*const productsList =[
+Product({
+    id: 1,
+    name: "produto 1",
+    description: "This is the first product",
+    imagem: "https://example.com/product1.jpg",
+    preço: "10.00",
+  }),
+Product({
+    id: 2,
+    name: "produto 2",
+    description: "This is the second product",
+    imagem: "https://example.com/product1.jpg",
+    preço: "20.00",
+})
+];*/
 
-function ProductCatalog() {
+
+
+function ProductCatalog() {  
   const products = [
     {
       id: 1,
       name: 'Product 1',
       description: 'This is the first product',
       imageUrl: 'https://example.com/product1.jpg',
+      preço: "10.00",
     },
     {
       id: 2,
-      name: 'Product 2',
-      description: 'This is the second product',
-      imageUrl: 'https://example.com/product2.jpg',
-    },
-    {
-      id: 3,
-      name: 'Product 3',
-      description: 'This is the third product',
-      imageUrl: 'https://example.com/product3.jpg',
-    },    
-    {
-      id: 4,
-      name: 'Product 4',
-      description: 'This is the forth product',
-      imageUrl: 'https://example.com/product3.jpg',
-    },
-    {
-      id: 5,
-      name: 'Product 5',
-      description: 'This is the fifth product',
-      imageUrl: 'https://example.com/product3.jpg',
-    },
-    {
-      id: 6,
-      name: 'Product 6',
-      description: 'This is the sixth product',
-      imageUrl: 'https://example.com/product3.jpg',
-    },
+      name: "produto 2",
+      description: "This is the second product",
+      imageUrl: "https://example.com/product1.jpg",
+      preço: "20.00",
+    }
   ];
 
   return (
@@ -55,7 +52,7 @@ function ProductCatalog() {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-                {product.name}
+                {product.name} - R$:{product.preço}
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
                 {product.description}

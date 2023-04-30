@@ -8,8 +8,7 @@ header{
   align-content: center;
   background-color: rgb(168, 198, 209);  
   padding: 10px;  
-  display: flex;
-  margin-top: 25px;
+  display: flex;  
   margin-bottom: 25px;
 }
 
@@ -18,5 +17,3 @@ h1{
   align-content: center;
   color: azure;
 }
-
-
