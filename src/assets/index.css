@@ -1,20 +1,22 @@
 body {
-  margin: 0;  
+  margin: 0;   
+  background-color: bisque;
 }
 
 header{
   justify-content: center;
   align-content: center;
-  background-color: rgb(120, 159, 230);  
+  background-color: rgb(168, 198, 209);  
   padding: 10px;  
   display: flex;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 h1{
   font-size: xx-large;
   align-content: center;
+  color: azure;
 }
-h6{
-  padding: 0.25px;
-}
+
 
