@@ -1,14 +1,15 @@
 import React from 'react';
 import './assets/App.css';
 import ProductCatalog from './components/productCatalog';
-import NavBar from './components/navBar';
+import NavBar from './components/persistentDrawer';
 import Example from './components/carrosselSlide';
+import PersistentDrawerLeft from './components/persistentDrawer';
 //import SwipeableTextMobileStepper from './components/carrosselSlide';
 
 function App() {
   return (
     <div>
-      <NavBar/>
+      <PersistentDrawerLeft/>
       <Example/>
       <ProductCatalog />      
     </div>
