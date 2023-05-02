@@ -48,6 +48,10 @@ function Example() {
       name: "Random Name #2",
       description: "Hello World!",
     },
+    {
+      name: "Random Name #3",
+      description: "Hello UNIVERSE!",
+    },
   ];
 
   return (
@@ -61,7 +65,7 @@ function Example() {
 
 function Item(props: any) {
   return (
-    <Grid paddingX={2} maxWidth={800} maxHeight={600}>
+    <Grid paddingX={2} maxWidth={'flex'} maxHeight={800} height={400}>
       <Paper>
         <h2>{props.item.name}</h2>
         <p>{props.item.description}</p>        

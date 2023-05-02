@@ -3,17 +3,7 @@ body {
   background-color: rgb(236, 222, 204);
 }
 
-header{
-  justify-content: center;
-  align-content: center;
-  background-color: rgb(168, 198, 209);  
-  padding: 10px;  
-  display: flex;  
-  margin-bottom: 25px;
-}
-
-h1{
-  font-size: xx-large;
-  align-content: center;
-  color: azure;
+header{  
+  padding: 10px; 
+  
 }

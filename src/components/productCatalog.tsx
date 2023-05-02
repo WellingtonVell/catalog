@@ -1,6 +1,7 @@
 import React from "react";
-import Product from "./products";
 import { Grid, Card, CardMedia, CardContent, Typography } from "@mui/material";
+/*import Product from "./products";*/
+
 
 /*const productsList =[
 Product({
@@ -36,11 +37,39 @@ function ProductCatalog() {
       description: "This is the second product",
       imageUrl: "https://example.com/product1.jpg",
       preço: "20.00",
-    }
+    },
+    {
+      id: 3,
+      name: 'Product 3',
+      description: 'This is the thrid product',
+      imageUrl: 'https://example.com/product1.jpg',
+      preço: "10.00",
+    },
+    {
+      id: 4,
+      name: 'Product 4',
+      description: 'This is the first product',
+      imageUrl: 'https://example.com/product1.jpg',
+      preço: "10.00",
+    },
+    {
+      id: 5,
+      name: 'Product 5',
+      description: 'This is the first product',
+      imageUrl: 'https://example.com/product1.jpg',
+      preço: "10.00",
+    },
+    {
+      id: 6,
+      name: 'Product 6',
+      description: 'This is the first product',
+      imageUrl: 'https://example.com/product1.jpg',
+      preço: "10.00",
+    },
   ];
 
   return (
-    <Grid container spacing={2} paddingX={2}>
+    <Grid container spacing={2} paddingTop={5} paddingX={2}>
       {products.map((product) => (
         <Grid item xs={12} sm={6} md={4} key={product.id}>
           <Card>
