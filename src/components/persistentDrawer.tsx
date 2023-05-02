@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
-import { Box, CssBaseline, Drawer,  Toolbar,Typography } from '@mui/material';
+import { Box, CssBaseline, Drawer, Toolbar, Typography } from '@mui/material';
 
 const drawerWidth = 240;
 
@@ -14,33 +14,33 @@ const AppBar = styled(MuiAppBar, {
 })<AppBarProps>(({ theme, open }) => ({
   transition: theme.transitions.create(['margin', 'width'], {
     easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
+    duration: theme.transitions.duration.leavingScreen,    
   }),
   ...(open && {
     width: `calc(100% - ${drawerWidth}px)`,
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
-      
+
     }),
     marginRight: drawerWidth,
     justifyContent: 'center',    
   }),
 }));
 
-export default function PersistentDrawerRight() {  
-  const [open] = React.useState(false);  
+export default function PersistentDrawerRight() {
+  const [open] = React.useState(false);
 
   return (
-    <Box sx={{ display: 'flex'}} paddingBottom={5}>
-      <CssBaseline />
-      <AppBar position="fixed" open={open}>
+    <Box sx={{ display: 'flex' }} paddingBottom={5}>      
+      <CssBaseline />      
+      <AppBar position="fixed" open={open} style={{background: 'rgb(49, 199, 199)'}}>
         <Toolbar>
-          <Typography variant="h4" noWrap sx={{ flexGrow: 1}} color={'azure'} component="div" align='center'>
+          <Typography variant="h4" noWrap sx={{ flexGrow: 1 }} color={'rgb(243, 245, 131)'} component="div" align='center'>
             Nome da Loja
-          </Typography>          
+          </Typography>
         </Toolbar>
-      </AppBar>      
+      </AppBar>     
       <Drawer
         sx={{
           paddingY: 5,
@@ -52,7 +52,9 @@ export default function PersistentDrawerRight() {
         }}
         variant="persistent"
         anchor="right"
-        open={open}></Drawer>
+        open={open}>
+      </Drawer>
     </Box>
   );
 }
+
