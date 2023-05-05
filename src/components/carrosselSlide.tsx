@@ -34,22 +34,25 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 };
 export default Carousel;*/
 
-import { Button, Grid, Paper } from "@mui/material";
+import {Grid, Paper } from "@mui/material";
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 
-function Example() {
+function Carrosel() {
   var items = [
     {
       name: "Random Name #1",
+      imageUrl: 'https://example.com/product1.jpg',
       description: "Probably the most random thing you have ever seen!",
     },
     {
       name: "Random Name #2",
+      imageUrl: 'https://example.com/product1.jpg',
       description: "Hello World!",
     },
     {
       name: "Random Name #3",
+      imageUrl: 'https://example.com/product1.jpg',
       description: "Hello UNIVERSE!",
     },
   ];
@@ -68,10 +71,12 @@ function Item(props: any) {
     <Grid paddingX={2} maxWidth={'flex'} maxHeight={800} height={400}>
       <Paper>
         <h2>{props.item.name}</h2>
-        <p>{props.item.description}</p>        
+        <img src={props.item.imageUrl} alt="teste">
+        </img>
+        <p>{props.item.description}</p>
       </Paper>
     </Grid>
   );
 }
 
-export default Example;
+export default Carrosel;
