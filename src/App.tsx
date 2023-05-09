@@ -4,14 +4,12 @@ import ProductCatalog from './components/productCatalog';
 import Carrosel from './components/carrosselSlide';
 import PersistentDrawerLeft from './components/persistentDrawer';
 
+
 function App() {
   return (    
-    <div>
+    <div className='App'>
       <PersistentDrawerLeft/>
-      <Carrosel/>
-      <ProductCatalog />      
     </div>
-    
   );
 }
 
