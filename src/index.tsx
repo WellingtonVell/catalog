@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import App from "./App";
-import Admin from "./pages/Admin";
+import Admin from "./Admin";
 import ReactDOM from "react-dom/client";
 import React from "react";
 
@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     //errorElement: <ErrorPage/>,
     children: [
       {
-        path: "admin",
+        path: "/Admin",
         element: <Admin />,
       },
     ],
