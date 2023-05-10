@@ -1,17 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './assets/index.css';
-import App from './App';
-import Admin from './Admin';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./App";
+import Admin from "./pages/Admin";
+import ReactDOM from "react-dom";
+import React from "react";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    //errorElement: <ErrorPage/>,
+    children: [
+      {
+        path: "admin",
+        element: <Admin />,
+      },
+    ],
+  },
+]);
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App/>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
-
-
