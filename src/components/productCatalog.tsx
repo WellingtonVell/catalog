@@ -1,97 +1,29 @@
 import React from "react";
 import { Grid, Card, CardMedia, CardContent, Typography, Box } from "@mui/material";
+import Product from "./products";
+
+
+
 
 function ProductCatalog() {
+
   const productsT1 = [
-    {
-      id: 1,
-      name: 'ProdutoT1 1',
-      description: 'This is the first product',
-      imageUrl: 'https://example.com/product1.jpg',
-      preço: "10.00",
-    },
-    {
-      id: 2,
-      name: 'ProdutoT1 2',
-      description: "This is the second product",
-      imageUrl: "https://example.com/product1.jpg",
-      preço: "20.00",
-    },
-    {
-      id: 3,
-      name: 'ProdutoT1 3',
-      description: 'This is the thrid product',
-      imageUrl: 'https://example.com/product1.jpg',
-      preço: "10.00",
-    },
-    {
-      id: 4,
-      name: 'ProdutoT1 4',
-      description: 'This is the first product',
-      imageUrl: 'https://example.com/product1.jpg',
-      preço: "10.00",
-    },
-    {
-      id: 5,
-      name: 'ProdutoT1 5',
-      description: 'This is the first product',
-      imageUrl: 'https://example.com/product1.jpg',
-      preço: "10.00",
-    },
-    {
-      id: 6,
-      name: 'ProdutoT1 6',
-      description: 'This is the first product',
-      imageUrl: 'https://example.com/product1.jpg',
-      preço: "10.00",
-    },
+    Product(1, 'ProdutoT1 1', 'This is the first product', 'https://example.com/product1.jpg', 150),
+    Product(2, 'ProdutoT1 2', 'This is the second product', 'https://example.com/product1.jpg', 120),
+    Product(3, 'ProdutoT1 3', 'This is the third product', 'https://example.com/product1.jpg', 130),
+    Product(4, 'ProdutoT1 4', 'This is the third product', 'https://example.com/product1.jpg', 100),
+    Product(5, 'ProdutoT1 2', 'This is the third product', 'https://example.com/product1.jpg', 180),
+    Product(6, 'ProdutoT1 6', 'This is the third product', 'https://example.com/product1.jpg', 190),
   ];
-
   const productsT2 = [
-    {
-      id: 1,
-      name: 'ProdutoT2 1',
-      description: 'This is the first product',
-      imageUrl: 'https://example.com/product1.jpg',
-      preço: "10.00",
-    },
-    {
-      id: 2,
-      name: "ProdutoT2 2",
-      description: "This is the second product",
-      imageUrl: "https://example.com/product1.jpg",
-      preço: "20.00",
-    },
-    {
-      id: 3,
-      name: 'ProdutoT2 3',
-      description: 'This is the thrid product',
-      imageUrl: 'https://example.com/product1.jpg',
-      preço: "10.00",
-    },
-    {
-      id: 4,
-      name: 'ProdutoT2 4',
-      description: 'This is the first product',
-      imageUrl: 'https://example.com/product1.jpg',
-      preço: "10.00",
-    },
-    {
-      id: 5,
-      name: 'ProdutoT2 5',
-      description: 'This is the first product',
-      imageUrl: 'https://example.com/product1.jpg',
-      preço: "10.00",
-    },
-    {
-      id: 6,
-      name: 'ProdutoT2 6',
-      description: 'This is the first product',
-      imageUrl: 'https://example.com/product1.jpg',
-      preço: "10.00",
-    },
-  ];
+    Product(1, 'ProdutoT2 1', 'This is the first product', 'https://example.com/product1.jpg', 150),
+    Product(2, 'ProdutoT2 2', 'This is the second product', 'https://example.com/product1.jpg', 120),
+    Product(3, 'ProdutoT2 3', 'This is the third product', 'https://example.com/product1.jpg', 130),
+    Product(4, 'ProdutoT2 4', 'This is the third product', 'https://example.com/product1.jpg', 100),
+    Product(5, 'ProdutoT2 2', 'This is the third product', 'https://example.com/product1.jpg', 180),
+    Product(6, 'ProdutoT2 6', 'This is the third product', 'https://example.com/product1.jpg', 190),
 
+  ];
   return (
     <Box paddingTop={3}>
       <header style={{ backgroundColor: 'rgb(49, 199, 199)' }}>      <Typography variant="h4" noWrap sx={{ flexGrow: 1 }} color={'rgb(243, 245, 131)'} component="div" align='center' paddingY={2}> Óculos de Sol </Typography>
@@ -102,7 +34,7 @@ function ProductCatalog() {
             <Card>
               <CardMedia
                 component="img"
-                image={product.imageUrl}
+                image={product.imagem}
                 alt={product.name}
                 height="200" />
               <CardContent>
@@ -125,7 +57,7 @@ function ProductCatalog() {
             <Card>
               <CardMedia
                 component="img"
-                image={product.imageUrl}
+                image={product.imagem}
                 alt={product.name}
                 height="200" />
               <CardContent>

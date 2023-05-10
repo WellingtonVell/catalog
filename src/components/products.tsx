@@ -1,13 +1,9 @@
-import React from "react";
-
-function Product(props: {
-  id: number;
-  name: string;
-  description: string;
-  imagem: string;
-  preço: string;
-}) {
-  return Product;
-}
+function Product(
+  id: number,
+  name: string,
+  description: string,
+  imagem: string,
+  preço: number,
+) {return { id, name, description, imagem, preço };}
 
 export default Product;
