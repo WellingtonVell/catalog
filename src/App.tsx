@@ -9,6 +9,8 @@ function App() {
   return (    
     <div className='App'>
       <PersistentDrawerLeft/>
+      <Carrosel/>
+      <ProductCatalog/>
     </div>
   );
 }
