@@ -37,7 +37,7 @@ export default function DrawerAdm() {
       <AppBar position="fixed" open={open} style={{background: 'rgb(49, 199, 199)'}}>
         <Toolbar>
           <Typography variant="h4" noWrap sx={{ flexGrow: 1 }} color={'rgb(243, 245, 131)'} component="div" align='center'>
-            ADMIN
+            ADMINNNNN
           </Typography>
         </Toolbar>
       </AppBar>     
