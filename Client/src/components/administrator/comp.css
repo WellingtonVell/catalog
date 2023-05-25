@@ -8,3 +8,8 @@
     justify-content: center;
     align-items: center;
 }
+
+.grid-hover:hover{
+    background-color: aquamarine;
+    
+}

@@ -1,12 +1,13 @@
-import { Box, Button } from "@mui/material";
+import { Box, Button, Grid } from "@mui/material";
 import "./comp.css"
 import { useEffect, useState } from "react";
 import Axios from "axios";
+import Cards from "../Cards/cards";
 
 function Comp() {
 
     const [values, setValues] = useState<any>();
-    const [products, setProducts] = useState();   
+    const [products, setProducts] = useState<any>();
 
     const handleChangeValues = (value: any) => {
         setValues((prevValues: any) => ({
@@ -79,7 +80,7 @@ function Comp() {
                             onChange={handleChangeValues} />
                     </ul>
                     <ul>
-                        <input
+                        <input 
                             type="text"
                             name="type"
                             placeholder="Tipo de Óculos"
@@ -93,11 +94,26 @@ function Comp() {
                         </Button>
                     </ul>
                 </div>
+                <Grid container spacing={2} paddingY={5} paddingX={2}>
+                    {typeof products !== "undefined" && products.map((value: any) => (
+                        <Grid item xs={12} sm={6} md={4} key={value.id}>
+                            <Cards
+                                key={value.id}
+                                listCards={products}
+                                setListCards={setProducts}
+                                id={value.id}
+                                name={value.name}
+                                description={value.description}
+                                image={value.image}
+                                price={value.price}
+                                type={value.type}>
+                            </Cards>
+                        </Grid>
+                    ))}
+                </Grid>
             </Box>
         </div>
     );
 }
-
-
 
 export default Comp;

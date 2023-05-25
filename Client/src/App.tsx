@@ -1,8 +1,8 @@
 import React from 'react';
 import './assets/App.css';
-import ProductCatalog from './components/productCatalog';
-import Carrosel from './components/carrosselSlide';
-import PersistentDrawerLeft from './components/persistentDrawer';
+import ProductCatalog from './components/FrontCatalog/productCatalog';
+import Carrosel from './components/FrontCatalog/carrosselSlide';
+import PersistentDrawerLeft from './components/FrontCatalog/persistentDrawer';
 
 
 function App() {

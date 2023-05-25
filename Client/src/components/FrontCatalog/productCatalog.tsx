@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Card, CardMedia, CardContent, Typography, Box } from "@mui/material";
-import Product from "./products";
+import Product from "../products";
 
 
 
