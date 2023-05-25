@@ -25,7 +25,8 @@ app.post("/register", (req, res) => {
   let SQL = "INSERT INTO produtos ( name, description, image, price, type) VALUES (?, ?, ?, ?, ?)";
 
   db.query(SQL, [name, description, image,price,type], (err, result) => {
-    console.log(err);
+    if(err) console.log(err);
+    else res.send(result);
   });
 });
 
@@ -40,6 +41,35 @@ app.get("/getProducts", (req, res) => {
     }
   });
 });
+
+app.put("/edit",(req,res) =>{
+  const { id } = req.body;
+  const { name } = req.body;
+  const { description } = req.body;
+  const { image } = req.body;
+  const { price } = req.body;
+  const { type } = req.body;
+
+  let SQL = 
+  "UPDATE produtos SET name = ?, description = ?, image = ?, price = ?, type = ? WHERE idprodutos = ?";
+
+  db.query(SQL, [name, description, image,price,type,id], (err,result) =>{
+    if(err) console.log(err);
+    else res.send(result);
+  })
+})
+
+app.delete("/delete/:id",(req,res)=>{
+  const {id}  = req.params;
+
+  let SQL = "DELETE FROM produtos WHERE idprodutos = ?";
+
+  db.query(SQL, [id], (err,result)=>{
+    if(err) console.log(err);
+    else res.send(result);
+  })
+
+})
 
 app.listen(port, () => {
     console.log("Servidor API rodando na porta ");

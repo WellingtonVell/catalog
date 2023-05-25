@@ -11,7 +11,8 @@ function Cards(props: any) {
 
     return (
         <>
-        <FormDialog open={open} setOpen={setOpen} 
+        <FormDialog open={open} setOpen={setOpen}
+        id={props.id} 
         name={props.name}
         description={props.description}
         image={props.image}

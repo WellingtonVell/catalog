@@ -3,6 +3,7 @@ import "./comp.css"
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import Cards from "../Cards/cards";
+import MultiSelect from "../Dialog/select";
 
 function Comp() {
 
@@ -80,7 +81,7 @@ function Comp() {
                             onChange={handleChangeValues} />
                     </ul>
                     <ul>
-                        <input 
+                        <input
                             type="text"
                             name="type"
                             placeholder="Tipo de Óculos"
@@ -101,7 +102,7 @@ function Comp() {
                                 key={value.id}
                                 listCards={products}
                                 setListCards={setProducts}
-                                id={value.id}
+                                id={value.idprodutos}
                                 name={value.name}
                                 description={value.description}
                                 image={value.image}

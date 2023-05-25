@@ -1,52 +1,25 @@
 import * as React from 'react';
-import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Select from '@mui/material/Select';
 
-const types = [
-  'Óculos de Sol',
-  'Óculos de Grau'  
-];
-export default function MultipleSelect(props:any) {
-  
-  const [personName, setPersonName] = React.useState<string[]>([]);
+export default function BasicSelect(props: any) {
 
-  const handleChange = (event: SelectChangeEvent<typeof personName>) => {
-    const {
-      target: { value },
-    } = event;
-    setPersonName(
-      // On autofill we get a stringified value.
-      typeof value === 'string' ? value.split(',') : value,
-    );
-  };
-
-  return (
-    <div>
-      <FormControl sx={{ m: 1, width: 500 }}>
-        <InputLabel id="demo-multiple-name-label">Tipo de Óculos</InputLabel>
-        <Select
-          labelId="demo-multiple-name-label"
-          id="type"
-          multiple
-          value={personName}
-          onChange={handleChange}
-          input={<OutlinedInput label="Name" />}
-          
-          defaultValue={props.type}
-        >
-          {types.map((type) => (
-            <MenuItem
-              key={type}
-              value={type}              
+    return (
+        <FormControl sx={{width:210}} >
+            <InputLabel id="demo-simple-select-label">Tipo de Óculos</InputLabel>
+            <Select
+                labelId="demo-simple-select-label"
+                id="type"    
+                name="type"           
+                label="Tipo de Óculos"
+                input={props.type}
             >
-              {type}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-    </div>
-  );
+                <MenuItem value={'sol'}>Óculos de Sol</MenuItem>
+                <MenuItem value={'grau'}>Óculos de Grau</MenuItem>
+
+            </Select>
+        </FormControl>
+    );
 }
